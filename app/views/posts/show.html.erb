@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @post.data %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @post.titulo %>
+</p>
+
+<p>
+  <b>Chamada:</b>
+  <%= @post.chamada %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= raw @post.texto %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

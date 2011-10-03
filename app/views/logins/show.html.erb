@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @login.login %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @login.senha %>
+</p>
+
+<p>
+  <b>Ultimo login:</b>
+  <%= @login.ultimo_login %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @login.cpf %>
+</p>
+
+
+<%= link_to 'Edit', edit_login_path(@login) %> |
+<%= link_to 'Back', logins_path %>

@@ -1,0 +1,29 @@
+<h1>Listing logins</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Senha</th>
+    <th>Ultimo login</th>
+    <th>Cpf</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @logins.each do |login| %>
+  <tr>
+    <td><%= login.login %></td>
+    <td><%= login.senha %></td>
+    <td><%= login.ultimo_login %></td>
+    <td><%= login.cpf %></td>
+    <td><%= link_to 'Show', login %></td>
+    <td><%= link_to 'Edit', edit_login_path(login) %></td>
+    <td><%= link_to 'Destroy', login, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Login', new_login_path %>

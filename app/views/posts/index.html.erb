@@ -1,0 +1,21 @@
+
+
+<h1>Listing posts</h1>
+
+
+<% @posts.each do |post| %>
+
+  <h1><%= post.titulo %></h1>
+  <%= post.chamada %> <%= link_to 'Leia Mais...', post %>
+
+<% end %>
+
+<br />
+
+<%= will_paginate @posts %>
+
+<br/>
+
+<!--%= page_entries_info @posts %-->
+
+<%= link_to 'New Post', new_post_path %>
