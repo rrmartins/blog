@@ -2,12 +2,12 @@
 
 <p>
   <b>Data:</b>
-  <%= @post.data %>
+  <%= @post.data.strftime("%d/%m/%Y") %>
 </p>
 
 <p>
   <b>Titulo:</b>
-  <%= @post.titulo %>
+  <%= @post.titulo %>	
 </p>
 
 <p>
@@ -19,6 +19,59 @@
   <b>Texto:</b>
   <%= raw @post.texto %>
 </p>
+<br />
+<% if @comentario.count != 0 %>
+	<h1>Comentarios</h1>
+	<% @comentario.each do |coment|%>
+		<div id="footer" class="tr"> 
+		</div>
+		<p>
+			<b>Nome    -->   </b>
+			<%= coment.nome %>
+		</p>
+		<p>
+			<b>Email    -->   </b>
+			<%= raw coment.email %>
+		</p>
+		<p>
+			<b>Site    -->   </b>
+			<%= raw coment.site %>
+		</p>
+		<p>
+			<b>Comentario    -->   </b>
+			<%= raw coment.comentario %>
+		</p>
+		<div id="footer" class="tr"> 
+		</div>
+	<% end %>
+<% else %>
+	<h1>Comentarios</h1>
+	nenhum comentario! Seja o primeiro!
+<% end %>
+<%= form_for(@com) do |f| %>
+	  <%= f.hidden_field :post_id, :value => params[:id] %>
+	  <div class="field">
+	    <%= f.label :nome %><br />
+	    <%= f.text_field :nome %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :site %><br />
+	    <%= f.text_field :site %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :comentario %><br />
+	    <%= f.text_area :comentario %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% if !current_user.nil?  %>
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Back', posts_path %>
+<%end%>

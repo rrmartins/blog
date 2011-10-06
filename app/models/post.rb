@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  has_many :comentarios
 
   validates_presence_of :titulo, :message => "deve ser preenchido"
   validates_presence_of :chamada, :message => "deve ser preenchido"

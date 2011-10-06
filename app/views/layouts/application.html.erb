@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<head>
 		<title>Blog</title>
 		<%= stylesheet_link_tag :all %>
 		<%= javascript_include_tag :defaults %>
 		<%= stylesheet_link_tag("base.css") %>
+		<%= stylesheet_link_tag("base2.css") %>
+		<%= stylesheet_link_tag("grid.css")%>
+		<%= stylesheet_link_tag("extensions.css")%>
 		<%= csrf_meta_tag %>
+		<%= javascript_include_tag("jquery-1.6.3.min") %>
+		<%= javascript_include_tag("jquery.cookie") %>
+		<%= javascript_include_tag("jquery.uniform") %>
+		<%= javascript_include_tag("jquery.idTabs") %>
+		<%= javascript_include_tag("jquery.tipsy") %>
+		<%= javascript_include_tag("jquery.facebox") %>
+		<%= javascript_include_tag("jquery.visualize") %>
+		<%= javascript_include_tag :defaults %>
+		<!--[if IE]>
+			<%= javascript_include_tag("excanvas") %>
+		<![endif]-->
+		<%= javascript_include_tag("functions") %>
+		<!-- /JS -->
+
 	</head>
 	<body>
-		<ul class="hmenu">
-			<%= render 'devise/menu/registration_items' %>
-			<%= render 'devise/menu/login_items' %>
-		</ul>
-		<div style="text-align: right;">
-			<% if !current_user.nil?  %>
-			Seja Bem Vindo <%= current_user.email %> !
+		<body class="layout980">
+<div id="page-wrapper" class="width"> 
+  <!-- HEADER -->
+  <div id="header"> 
+    <!-- USERAREA -->
+    <!--ul class="hmenu">
+		</ul-->
+	<div class="user-area fr"> 
+    	<span class="spacer">
+    		<% if !current_user.nil?  %>
+			Seja Bem Vindo <strong> <%= current_user.email %> </strong> !
+			<!--Hello <strong>John Doe</strong></span> | <a href="#messages" class="spacer" rel="modal">Messages <span class="notfi">3</span></a-->
 			<% end %>
-		</div>
+		</span>
+     </div>
+    <!-- USERAREA END --> 
+    <!-- LOGO --> 
+    <!--img id="logo" src="img/logo.png" alt="" border="" /-->
+    <div class="topo">
+			<center><font size="22px">Rodrigo Martins</font></center>
+		</div> 
+    <!-- LOGO END --> 
+  </div>
+  <!-- HEADER END --> 
+  <!-- NAV -->
+  <ul id="nav">
+    <li class="current"><a href="<%= root_url %>posts">Home</a></li>
+    <li><a href="#">Pages</a>
+      <ul>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">O código-fonte</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Quem sou.. :D </a></li>
+    <li style="float: right;"><%= render 'devise/menu/registration_items' %></li>
+    <li style="float: right;"><%= render 'devise/menu/login_items' %></li>
+  </ul>
+  <!-- NAV END -->
+
 		<br/>
 		<p class="notice">
 			<%= notice %>
@@ -25,5 +73,38 @@
 			<%= alert %>
 		</p>
 		<%= yield %>
+		<br/>
+		<br/>
+		<div id="footer" class="tr"> 
+			Copyright ©2011, A <a href="http://www.rrmartins.com/">Rodrigo Martins</a>, <a href="http://www.twitter.com/rr_martins">@rr_martins</a> 
+		</div>
+  <!-- FOOTER END --> 
+	</div>
+<!-- EXTRAS (MODALS) -->
+<div id="messages" style="display: none">
+  <h3>3 Messages</h3>
+  <p> <strong>17th May 2009</strong> by Admin<br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
+  <p> <strong>2nd May 2009</strong> by Jane Doe<br />
+    Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
+  <p> <strong>25th April 2009</strong> by Admin<br />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. <small><a href="#" class="remove-link" title="Remove message">Remove</a></small> </p>
+  <form action="#" method="post">
+    <h4>New Message</h4>
+    <fieldset>
+      <textarea class="textarea" name="textfield" cols="45" rows="5"></textarea>
+    </fieldset>
+    <fieldset>
+      <input class="button medium fr" type="submit" value="Send" />
+      <select name="dropdown">
+        <option value="option1">Send to...</option>
+        <option value="option2">Admin</option>
+        <option value="option3">User One</option>
+        <option value="option4">User Two</option>
+        <option value="option4">User Three</option>
+      </select>
+    </fieldset>
+  </form>
+</div>
 	</body>
 </html>

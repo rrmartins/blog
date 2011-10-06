@@ -1,13 +1,11 @@
 
-
-<h1>Listing posts</h1>
-
-
 <% @posts.each do |post| %>
-
   <h1><%= post.titulo %></h1>
-  <%= post.chamada %> <%= link_to 'Leia Mais...', post %>
-
+  <%= post.chamada %> 
+  <%= link_to 'Leia Mais...', post %>
+  <br/>
+  <br/>
+  <br/>
 <% end %>
 
 <br />
@@ -17,5 +15,6 @@
 <br/>
 
 <!--%= page_entries_info @posts %-->
-
-<%= link_to 'New Post', new_post_path %>
+<% if !current_user.nil?  %>
+	<%= link_to 'New Post', new_post_path %>
+<% end %>

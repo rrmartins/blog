@@ -16,7 +16,10 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-
+    @comentario = Comentario.find_all_by_post_id(params[:id])
+    
+    @com = Comentario.new
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
