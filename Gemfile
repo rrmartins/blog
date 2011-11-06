@@ -17,6 +17,8 @@ gem 'mysql2', '~> 0.2.6'
 # omniauth - interação com facebook e twitter
 # gem 'omniauth', '~> 0.2.6'
 
+# gem 'sqlite3'
+
 gem "devise"
 
 gem 'warbler'
