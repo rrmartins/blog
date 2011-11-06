@@ -23,8 +23,6 @@ describe PostsController do
       response.should be_success
     end
     
-    
-  
   it "uma instancia" do
     controller.should be_an_instance_of(PostsController)
   end  

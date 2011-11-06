@@ -19,17 +19,32 @@ gem 'mysql2', '~> 0.2.6'
 
 gem "devise"
 
+gem 'warbler'
+
 gem 'will_paginate', '~> 3.0.pre4'
 
-gem "tuiter", "~> 0.0.7"
+# gem "tuiter", "~> 0.0.7"
 
-gem "webco-tuiter"
+# gem "webco-tuiter"
 
-gem "twitter"
+# gem "twitter"
+
+gem 'twitter'
 
 # instalação do paperclip
 
-gem 'paperclip'
+gem 'jruby-openssl'
+
+gem "paperclip", "~> 2.4"
+
+platforms :jruby do
+  
+  gem 'activerecord-jdbc-adapter'
+
+ # Mysql Server JDBC adapter
+  gem 'activerecord-jdbcmysql-adapter'
+
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'

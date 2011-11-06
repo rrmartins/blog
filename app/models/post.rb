@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :texto, :message => "deve ser preenchido"
   # validates_presence_of :data, :message => "deve ser preenchido"
   validate :inserir_data_caso_nao_tenha
+  # validate :colocar_maiuscula
   validate :primeira_letra_chamada_deve_ser_maiuscula
 
   private
@@ -19,6 +20,10 @@ class Post < ActiveRecord::Base
   def primeira_letra_titulo_deve_ser_maiuscula
     errors.add("titulo", "primeira letra deve ser maiuscula") unless titulo =~ /[A-Z].*/
   end
+  
+  # def colocar_maiuscula
+    # self.titulo = self.titulo[0].upcase + self.titulo[1..-1]
+  # end
   
   def inserir_data_caso_nao_tenha
     if self.data.nil?
