@@ -3,7 +3,7 @@ class CreateLogins < ActiveRecord::Migration
     create_table :logins do |t|
       t.string :login
       t.string :senha
-      t.datatime :ultimo_login
+#      t.datatime :ultimo_login
       t.string :cpf
 
       t.timestamps
