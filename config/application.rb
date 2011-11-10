@@ -38,7 +38,7 @@ module Blog
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.perform_deliveries = true
-    config.action_mailer.default_url_options = { :host => root_path }
+#    config.action_mailer.default_url_options = { :host => "http://blogrorv1.heroku.com/" }
 
 
     ActionMailer::Base.smtp_settings = {
