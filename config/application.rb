@@ -35,6 +35,20 @@ module Blog
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.default_url_options = { :host => root_path }
+
+
+    ActionMailer::Base.smtp_settings = {
+                    :address        => "smtp.gmail.com",
+                    :port           => 587,
+                    :authentication => :plain,
+                    :user_name      => "rodrigo.rr.mart@gmail.com",
+                    :password       => "09042008N@"
+    }
+
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
