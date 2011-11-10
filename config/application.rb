@@ -46,7 +46,7 @@ module Blog
                     :port           => 587,
                     :authentication => :plain,
                     :user_name      => "rodrigo.rr.mart@gmail.com",
-                    :password       => "09042008N@"
+                    :password       => "secrect"
     }
 
 
