@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111005230701) do
+ActiveRecord::Schema.define(:version => 20111120142251) do
+
+  create_table "categoria", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "descricao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categorias", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "descricao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comentarios", :force => true do |t|
     t.string   "nome"
@@ -38,6 +52,10 @@ ActiveRecord::Schema.define(:version => 20111005230701) do
     t.string   "texto"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", :force => true do |t|

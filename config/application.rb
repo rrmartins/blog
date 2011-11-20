@@ -35,10 +35,10 @@ module Blog
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.perform_deliveries = true
-#    config.action_mailer.default_url_options = { :host => "http://blogrorv1.heroku.com/" }
+     config.action_mailer.delivery_method = :smtp
+     config.action_mailer.raise_delivery_errors = true
+     config.action_mailer.perform_deliveries = true
+     config.action_mailer.default_url_options = { :host => "http://blogrorv1.heroku.com/" }
 
 
     # Configure sensitive parameters which will be filtered from the log file.

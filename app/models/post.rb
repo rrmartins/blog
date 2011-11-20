@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  
   has_many :comentarios
   before_save :inserir_data_caso_nao_tenha
   validates_presence_of :titulo, :message => "deve ser preenchido"

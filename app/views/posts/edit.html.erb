@@ -1,6 +1,10 @@
 <h1>Editing post</h1>
 
-<%= render 'form' %>
+<%= form_for @post, :url => post_path(@post), :html => { :class => :form, :multipart => true  } do |f| -%>
+	        <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>
+
+<!--%= render 'form' %-->
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>

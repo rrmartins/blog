@@ -1,16 +1,21 @@
 source 'http://rubygems.org'
 
+#gem 'rails', '3.1'
 gem 'rails', '3.0.9'
+
+gem 'twitter'
+
+# gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "rspec", "~> 2.6.0"
 group :test, :development do
   gem "rspec-rails", "~> 2.6.1"
 end
 
+gem 'mysql2', '~> 0.2.6'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2', '~> 0.2.6'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -22,7 +27,7 @@ gem 'mysql2', '~> 0.2.6'
 
 gem "devise"
 
-# gem 'warbler'
+gem 'warbler'
 
 gem 'will_paginate', '~> 3.0.pre4'
 
@@ -36,18 +41,18 @@ gem 'twitter'
 
 # instalação do paperclip
 
-# gem 'jruby-openssl'
+gem 'jruby-openssl'
 
 gem "paperclip", "~> 2.4"
 
-# platforms :jruby do
+platforms :jruby do
   
-#  gem 'activerecord-jdbc-adapter'
+  gem 'activerecord-jdbc-adapter'
 
  # Mysql Server JDBC adapter
-#  gem 'activerecord-jdbcmysql-adapter'
+  gem 'activerecord-jdbcmysql-adapter'
 
-# end
+end
 
 # Deploy with Capistrano
 # gem 'capistrano'
