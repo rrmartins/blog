@@ -5,7 +5,11 @@ gem 'rails', '3.0.9'
 
 gem 'twitter'
 
+gem 'activeadmin'
+
 # gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+gem 'i18n'
 
 gem "rspec", "~> 2.6.0"
 group :test, :development do
@@ -29,7 +33,9 @@ gem "devise"
 
 gem 'warbler'
 
-gem 'will_paginate', '~> 3.0.pre4'
+gem 'will_paginate', '3.0.pre2'
+
+gem 'kaminari'
 
 # gem "tuiter", "~> 0.0.7"
 

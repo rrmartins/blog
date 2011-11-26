@@ -29,14 +29,14 @@
 		<body class="layout980">
 <div id="page-wrapper" class="width"> 
   <!-- HEADER -->
-  <div id="header"> 
+  <div id="header_2"> 
     <!-- USERAREA -->
     <!--ul class="hmenu">
 		</ul-->
 	<div class="user-area fr"> 
     	<span class="spacer">
-    		<% if !current_user.nil?  %>
-			Seja Bem Vindo <strong> <%= current_user.email %> </strong> !
+    		<% if !current_admin_user.nil?  %>
+			Seja Bem Vindo <strong> <%= current_admin_user.email %> </strong> !
 			<!--Hello <strong>John Doe</strong></span> | <a href="#messages" class="spacer" rel="modal">Messages <span class="notfi">3</span></a-->
 			<% end %>
 		</span>
@@ -45,7 +45,7 @@
     <!-- LOGO --> 
     <!--img id="logo" src="img/logo.png" alt="" border="" /-->
     <div class="topo">
-			<center><font size="22px">Rodrigo Martins</font></center>
+			<center><font size="52px">Rodrigo Martins</font></center>
 		</div> 
     <!-- LOGO END --> 
   </div>
@@ -75,6 +75,21 @@
 		<%= yield %>
 		<br/>
 		<br/>
+		
+		<table border="0">
+	  	<tr>
+		    <td><%= image_tag Twitter.profile_image("rr_martins", :size => 'bigger') %></td>
+	    	<td><%= Twitter.user('rr_martins').location %>
+	    		<br> <%= Twitter.user('rr_martins').description %>
+	    	</td>
+	  	</tr>
+		<% Twitter.user_timeline("rr_martins",{:count=>5}).each do |twit| %>
+	  		<tr>
+			    <td colspan="2"><%= twit.text %></td>
+	  		</tr>
+		<% end %>
+		</table>
+		
 		<div id="footer" class="tr"> 
 			Copyright ©2011, A <a href="http://www.rrmartins.com/">Rodrigo Martins</a>, <a href="http://www.twitter.com/rr_martins">@rr_martins</a> 
 		</div>

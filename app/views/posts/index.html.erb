@@ -15,6 +15,6 @@
 <br/>
 
 <!--%= page_entries_info @posts %-->
-<% if !current_user.nil?  %>
+<% if !current_admin_user.nil?  %>
 	<%= link_to 'New Post', new_post_path %>
 <% end %>

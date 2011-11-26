@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     @posts = Post.all
-    @posts = Post.order("titulo ASC").paginate(:per_page=>5, :page=> params['page'])
-
+    @posts = Post.order("created_at desc").paginate(:per_page=>5, :page=> params['page'])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
