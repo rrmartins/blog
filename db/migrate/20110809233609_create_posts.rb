@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.datetime :data
       t.string :titulo
       t.string :chamada
-      t.string :texto
+      t.string :texto, :limit => 10000
 
       t.timestamps
     end

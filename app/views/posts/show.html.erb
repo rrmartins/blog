@@ -18,8 +18,8 @@
 <p>
   <b>Texto:</b><br/>
   <%= image_tag @post.image.url if !@post.image_file_name.nil? %>
-  <!--%= image_tag @post.image.url(:medium) if !@post.image_file_name.nil? %-->
-  <!--%= image_tag @post.image.url(:thumb) if !@post.image_file_name.nil? %--><br />
+  <%= image_tag @post.image.url(:medium) if !@post.image_file_name.nil? %>
+  <%= image_tag @post.image.url(:thumb) if !@post.image_file_name.nil? %><br />
   <%= raw @post.texto %>
 </p>
 <br />

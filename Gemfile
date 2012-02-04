@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 #gem 'rails', '3.1'
 gem 'rails', '3.0.9'
 
-gem 'twitter'
+# gem 'twitter'
 
 gem 'activeadmin'
 
@@ -16,8 +16,8 @@ group :test, :development do
   gem "rspec-rails", "~> 2.6.1"
 end
 
-gem 'mysql2', '~> 0.2.6'
-
+# gem "mysql2", "~> 0.3.10"
+gem "mysql2", "~> 0.2.6"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -31,34 +31,32 @@ gem 'mysql2', '~> 0.2.6'
 
 gem "devise"
 
-gem 'warbler'
+# gem 'warbler'
 
 gem 'will_paginate', '3.0.pre2'
 
 gem 'kaminari'
 
-# gem "tuiter", "~> 0.0.7"
+gem "tuiter", "~> 0.0.7"
 
 # gem "webco-tuiter"
 
 # gem "twitter"
 
-gem 'twitter'
-
 # instalação do paperclip
 
-gem 'jruby-openssl'
+# gem 'jruby-openssl'
 
 gem "paperclip", "~> 2.4"
 
-platforms :jruby do
-  
-  gem 'activerecord-jdbc-adapter'
-
- # Mysql Server JDBC adapter
-  gem 'activerecord-jdbcmysql-adapter'
-
-end
+# platforms :jruby do
+#   
+  # gem 'activerecord-jdbc-adapter'
+# 
+ # # Mysql Server JDBC adapter
+  # gem 'activerecord-jdbcmysql-adapter'
+# 
+# end
 
 # Deploy with Capistrano
 # gem 'capistrano'

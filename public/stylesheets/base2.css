@@ -117,6 +117,9 @@ address {
 .fl {
 	float:left;
 }
+.fc {
+	float:center;
+}
 .fr {
 	float:right;
 }
@@ -164,6 +167,21 @@ address {
 	text-align:right;
 	width:50%;
 }
+
+.user-left {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	margin-right:5px;
+	text-align:left;
+	width:50%;
+}
+
+.user-center {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+	margin-right:5px;
+	text-align:center;
+	width:100%;
+}
+
 .user-area .spacer {
 	margin:0 10px;
 }

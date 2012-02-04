@@ -1,20 +1,26 @@
 
-<% @posts.each do |post| %>
-  <h1><%= post.titulo %></h1>
-  <%= post.chamada %> 
-  <%= link_to 'Leia Mais...', post %>
-  <br/>
-  <br/>
-  <br/>
+<% if @posts.empty? %>
+	<div class="notification info">
+		Que ruim... Voce ainda não escreveu nada...
+	</div>
+	
+<% else %>
+	<% @posts.each do |post| %>
+	  <h1><%= post.titulo %></h1>
+	  <%= post.chamada %> 
+	  <%= link_to 'Leia Mais...', post %>
+	  <br/>
+	  <br/>
+	  <br/>
+	<% end %>
+	
+	<br />
+	
+	<%= will_paginate @posts %>
 <% end %>
-
-<br />
-
-<%= will_paginate @posts %>
-
 <br/>
 
 <!--%= page_entries_info @posts %-->
-<% if !current_admin_user.nil?  %>
+<% if !current_user.nil?  %>
 	<%= link_to 'New Post', new_post_path %>
 <% end %>

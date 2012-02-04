@@ -13,12 +13,14 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: blog_development
+  database: rrblog_dev
   pool: 5
   username: root
-  password: 09042008
+  password: 
   host: localhost
-  socket: /var/run/mysqld/mysqld.sock
+  #host: rrmartins.com
+  # socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,12 +33,12 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: blog_test
+  database: rrblog_test
   pool: 5
   username: root
-  password: 09042008
+  password: 
   host: localhost
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
 
 production:
   # adapter: sqlite3
@@ -49,6 +51,6 @@ production:
   database: blog_production
   pool: 5
   username: root
-  password: 09042008
+  password: 
   host: localhost
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
