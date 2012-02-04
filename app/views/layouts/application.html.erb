@@ -58,16 +58,18 @@
   <!-- HEADER END --> 
   <!-- NAV -->
   <ul id="nav">
-    <li class="current"><a href="<%= root_url %>posts">Home</a></li>
-    <li><a href="#">Pages</a>
+    <li class="current">
+    	<a href="<%= root_url %>posts">Home</a>
+    </li>
+    <li class="current"><a href="#">Pages</a>
       <ul>
         <li><a href="#">Agenda</a></li>
         <li><a href="#">O código-fonte</a></li>
       </ul>
     </li>
-    <li><a href="#">Quem sou.. :D </a></li>
-    <li style="float: right;"><%= render 'devise/menu/registration_items' %></li>
-    <li style="float: right;"><%= render 'devise/menu/login_items' %></li>
+    <li class="current"><a href="#">Quem sou.. :D </a></li>
+    <li class="current" style="float: right;"><%= render 'devise/menu/registration_items' %></li>
+    <li class="current" style="float: right;"><%= render 'devise/menu/login_items' %></li>
   </ul>
   <!-- NAV END -->
 

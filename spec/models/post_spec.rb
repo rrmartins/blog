@@ -8,8 +8,8 @@ describe Post do
   end
   
   it "deveria retornar maiuscula caso nao esteja" do
-    @post[:titulo] = "testando mais um rspec"
-    @post[:chamada] = "testando mais um rspec"
+    @post[:titulo] = "Testando mais um rspec"
+    @post[:chamada] = "Testando mais um rspec"
     @post[:texto] = "testando mais um rspec"
     Post.create!(@post)
   end

@@ -208,7 +208,7 @@ address {
 	margin: 0 1% 25px;
 	width: 100%;
 	padding: 7px 6px 0;
-	background: #202020 url('../img/nav.gif') repeat-x top;
+	/*background: #202020  repeat-x top;*/
 	line-height: 100%;
 	border:1px solid #202020;
 	border-radius: 10px;
